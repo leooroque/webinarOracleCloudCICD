@@ -1,9 +1,9 @@
 apiVersion: apps/v1beta
 kind: Deployment
 metadata:
-	name: springboot-k8s-deployment
+    name: springboot-k8s-deployment
 spec:
-	selector:
+    selector:
         matchlabels:
             app: springboot-k8s-deployment
         replicas: 3
