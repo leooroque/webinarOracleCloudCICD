@@ -10,16 +10,18 @@ import br.com.webinar.cicd.model.CalculadoraSimples;
 import br.com.webinar.cicd.model.CalculoSimples;
 
 @RestController
-@RequestMapping("/calcular")
+
 public class CalculadoraController {
 
     @PostMapping
+    @RequestMapping("/calcular")
     public double calcular(@RequestBody CalculoSimples detalhes){
      CalculadoraSimples cal = new CalculadoraSimples();
         return cal.calcular(detalhes);
     }
 
     @GetMapping
+    @RequestMapping("/webinar")
     public String calcular(){
         return "Webinar Oracle, seja bem vindo!! #CR";
     }
