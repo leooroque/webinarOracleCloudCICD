@@ -21,6 +21,6 @@ public class CalculadoraController {
 
     @GetMapping
     public String calcular(){
-        return "Webinar Oracle, seja bem vindo! #CR";
+        return "Webinar Oracle, seja bem vindo!! #CR";
     }
 }
