@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-k8s-deployment
+  labels:
+    app: springboot-k8s-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springboot-k8s-deployment
+  template:
+    metadata:
+      labels:
+        app: springboot-k8s-deployment
+    spec:
+      containers:
+      - name: springboot-k8s-deployment
+        image: gru.ocir.io/oraclemetodista/leo/webinario-cicd:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: ocirsecret
