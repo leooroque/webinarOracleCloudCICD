@@ -19,5 +19,12 @@ spec:
         image: gru.ocir.io/oraclemetodista/leo/webinario-cicd:latest
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: data
+          mountPath: /target/
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: myclaim
       imagePullSecrets:
-      - name: ocirsecret
+        - name: ocirsecret
