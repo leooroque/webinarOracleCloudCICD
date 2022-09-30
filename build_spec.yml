@@ -13,6 +13,6 @@ steps:
     command: |
       docker build . -t gru.ocir.io/idi1o0a010nx/poc-cicd-app:latest
   - type: Command
-    name: "List images"
+    name: "List dcoker images"
     command: |
       docker images
