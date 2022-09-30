@@ -5,7 +5,7 @@ shell: bash
 
 steps:
   - type: Command
-    name: "Build app"
+    name: "Build appV2"
     command: |
       mvn clean install
   - type: Command
