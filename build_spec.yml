@@ -9,7 +9,7 @@ steps:
     command: |
       mvn clean install
   - type: Command
-    name: "Create Docker image"
+    name: "Create Docker images"
     command: |
       docker build . -t gru.ocir.io/idi1o0a010nx/poc-cicd-app:latest
   - type: Command
